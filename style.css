@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-fondo:#F3F5F6;
+    --color-primario:#0A3871;
+    --color-secundario:#FFFFFF;
+    --color-terciario:#495057;
+    --color-cuaternario:#D8DFE8;
+
+    --fuente-inter: "Inter", "regular";
+}
+
+.logo {
+    width: 120;
+    height: 48;
+}
+
+/*Aqui empieza seccion 1*/
+
+body {
+    background-color: var(--color-fondo);
+}
+
+.entradaTexto {
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
+    font-family: var(--fuente-inter);
+    font-size: 32px;
+    border: none;
+}
+
+.disclaimer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--fuente-inter);
+    font-size: 12px;
+    color: var(--color-terciario);
+}
+
+.contenedorBotones {
+    display: flex;
+    gap: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+}
+
+.boton {
+    width: 328px;
+    max-height: 67px;
+    border-radius: 24px;
+    padding: 1%;
+}
+
+.botonEncriptar {
+    background: var(--color-primario);
+    color: var(--color-secundario);
+    border: none;
+}
+
+.botonDesencriptar {
+    background: var(--color-cuaternario);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
+
+/*Aqui empieza seccion 2*/
+
+.salidaTexto {
+    background-color: var(--color-secundario);
+}
+
+.alertaMensaje {
+    font-family: var(--fuente-inter);
+    font-size: 24px;
+    color: var(--color-terciario);
+    font-weight: bold;
+}
+
+.alertaInstruccion {
+    font-family: var(--fuente-inter);
+    font-size: 16px;
+    color: var(--color-terciario);
+}
+
+.botonCopiar {
+    background: var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
+}
