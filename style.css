@@ -10,15 +10,32 @@
     --fuente-inter: "Inter", "regular";
 }
 
-.logo {
-    width: 120;
-    height: 48;
+html, body {
+    height: 100%;  
+}
+
+body {
+    background-color: var(--color-fondo);
+    margin: 0px;
+    padding: 0px;
 }
 
 /*Aqui empieza seccion 1*/
 
-body {
-    background-color: var(--color-fondo);
+main {
+    display: flex;
+    margin: 2%;
+    align-items: stretch;
+    height: 100%;  
+}
+
+.contenedorPrincipal {
+    width: 73%;
+}
+
+.contenedorEntradaTexto {
+    height: 100%;
+    padding-left: 20%;
 }
 
 .entradaTexto {
@@ -27,6 +44,10 @@ body {
     font-family: var(--fuente-inter);
     font-size: 32px;
     border: none;
+}
+
+.botonesPrincipales {
+    position: absolute; bottom: 0;
 }
 
 .disclaimer {
@@ -41,8 +62,7 @@ body {
 .contenedorBotones {
     display: flex;
     gap: 24px;
-    font-family: var(--fuente-inter);
-    font-size: 16px;
+    height: 67px;
 }
 
 .boton {
@@ -50,6 +70,8 @@ body {
     max-height: 67px;
     border-radius: 24px;
     padding: 1%;
+    font-family: var(--fuente-inter);
+    font-size: 16px;
 }
 
 .botonEncriptar {
@@ -66,8 +88,18 @@ body {
 
 /*Aqui empieza seccion 2*/
 
+.contenedorSecundario {
+    width: 27%;
+}
+
 .salidaTexto {
     background-color: var(--color-secundario);
+    border-radius: 32px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .alertaMensaje {
@@ -75,12 +107,21 @@ body {
     font-size: 24px;
     color: var(--color-terciario);
     font-weight: bold;
+    text-align: center;
 }
 
 .alertaInstruccion {
     font-family: var(--fuente-inter);
     font-size: 16px;
     color: var(--color-terciario);
+    text-align: center;
+}
+
+.botonExtra {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    position: absolute; bottom: 0;
 }
 
 .botonCopiar {
@@ -88,4 +129,5 @@ body {
     border-radius: 24px;
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
+    height: 67px;
 }
