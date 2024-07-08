@@ -10,27 +10,39 @@
     --fuente-inter: "Inter", "regular";
 }
 
-html, body {
-    height: 100%;  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body {
-    background-color: var(--color-fondo);
+html, body {
+    height: 100%;
+    width: 100%;  
     margin: 0px;
     padding: 0px;
+    background-color: var(--color-fondo);
+    overflow: hidden;
+
+}
+
+ main {
+    width: 100%;
+    height: 100%; 
+ }
+
+.contenedores {
+    display: flex;
+    height: 95vh;
+    margin: 2%;
 }
 
 /*Aqui empieza seccion 1*/
 
-main {
-    display: flex;
-    margin: 2%;
-    align-items: stretch;
-    height: 100%;  
-}
 
 .contenedorPrincipal {
     width: 73%;
+    height: auto;
 }
 
 .contenedorEntradaTexto {
@@ -44,10 +56,8 @@ main {
     font-family: var(--fuente-inter);
     font-size: 32px;
     border: none;
-}
-
-.botonesPrincipales {
-    position: absolute; bottom: 0;
+    width: 80%;
+    height: 79%;
 }
 
 .disclaimer {
@@ -57,6 +67,7 @@ main {
     font-family: var(--fuente-inter);
     font-size: 12px;
     color: var(--color-terciario);
+    padding-bottom: 3%;
 }
 
 .contenedorBotones {
@@ -66,7 +77,7 @@ main {
 }
 
 .boton {
-    width: 328px;
+    width: 20.5rem;
     max-height: 67px;
     border-radius: 24px;
     padding: 1%;
@@ -90,38 +101,49 @@ main {
 
 .contenedorSecundario {
     width: 27%;
+    height: auto;
 }
 
 .salidaTexto {
     background-color: var(--color-secundario);
     border-radius: 32px;
-    height: 100%;
+    height: auto;
+}
+
+.contenedorImagenAlertas {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    height: 87vh;
+}
+
+.alertas {
+    font-family: var(--fuente-inter);
+    text-align: center;
+    color: var(--color-terciario);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+
 }
 
 .alertaMensaje {
-    font-family: var(--fuente-inter);
     font-size: 24px;
-    color: var(--color-terciario);
     font-weight: bold;
-    text-align: center;
 }
 
 .alertaInstruccion {
-    font-family: var(--fuente-inter);
     font-size: 16px;
-    color: var(--color-terciario);
-    text-align: center;
 }
 
 .botonExtra {
     display: flex;
     justify-content: center;
-    padding: 1%;
-    position: absolute; bottom: 0;
+    padding: 2%;
+    height: 13vh;
+    align-items: center;
+
 }
 
 .botonCopiar {
@@ -130,4 +152,57 @@ main {
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
     height: 67px;
+}
+
+/* Rensposividad para tablet y mobile*/
+@media (max-width: 768px) {
+
+    .contenedores {
+        height: 100% ;
+        flex-direction: column;
+        gap: 8%;
+
+    }
+
+    .contenedorPrincipal {
+        width: 100%;
+        height: 80%;
+    }
+
+    .contenedorSecundario{
+        width: 100%;
+        height: 20%;
+
+    }
+
+    .contenedorEntradaTexto {
+        padding-left: 0%;
+    }
+
+    .salidaTexto {
+        height: auto;
+    }
+
+    .contenedorImagenAlertas {
+        padding: 3%;
+        height: auto;
+    }
+
+    .contenedorImagen {
+        display: none;
+    }
+
+    .botonExtra {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 375px) {
+
+    .contenedorBotones {
+        flex-direction: column;
+    
+    }
 }
