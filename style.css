@@ -48,6 +48,7 @@ html, body {
 .contenedorEntradaTexto {
     height: 100%;
     padding-left: 20%;
+    padding-bottom: 5%;
 }
 
 .entradaTexto {
@@ -78,7 +79,7 @@ html, body {
 
 .boton {
     width: 20.5rem;
-    max-height: 67px;
+    height: 67px;
     border-radius: 24px;
     padding: 1%;
     font-family: var(--fuente-inter);
@@ -89,12 +90,14 @@ html, body {
     background: var(--color-primario);
     color: var(--color-secundario);
     border: none;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 .botonDesencriptar {
     background: var(--color-cuaternario);
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 /*Aqui empieza seccion 2*/
@@ -102,6 +105,7 @@ html, body {
 .contenedorSecundario {
     width: 27%;
     height: auto;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
 }
 
 .salidaTexto {
@@ -114,7 +118,13 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 87vh;
+    height: 80vh;
+    padding: 3%;
+}
+
+.contenedorImagen{
+    display: flex;
+    justify-content: center;
 }
 
 .alertas {
@@ -138,11 +148,13 @@ html, body {
 }
 
 .botonExtra {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 2%;
     height: 13vh;
     align-items: center;
+    
 
 }
 
@@ -152,6 +164,18 @@ html, body {
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
     height: 67px;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.5));
+}
+
+#salida {
+    font-family: var(--fuente-inter);
+    font-size: 24px;
+    color: var(--color-terciario);
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 3%;
+    font-weight: 400;
 }
 
 /* Rensposividad para tablet y mobile*/
@@ -160,7 +184,7 @@ html, body {
     .contenedores {
         height: 100% ;
         flex-direction: column;
-        gap: 8%;
+        gap: 5%;
 
     }
 
@@ -177,6 +201,11 @@ html, body {
 
     .contenedorEntradaTexto {
         padding-left: 0%;
+
+    }
+
+    .entradaTexto {
+        width: 100%;
     }
 
     .salidaTexto {
@@ -185,7 +214,7 @@ html, body {
 
     .contenedorImagenAlertas {
         padding: 3%;
-        height: auto;
+        height: 20%;
     }
 
     .contenedorImagen {
@@ -203,6 +232,11 @@ html, body {
 
     .contenedorBotones {
         flex-direction: column;
+        height: 158%;
     
+    }
+    .entradaTexto {
+        width: 100%;
+        height: 60%;
     }
 }
